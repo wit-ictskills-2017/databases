@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -66,8 +70,8 @@ figcaption
 
     
 <div class="two wide column sitemap">
-  <div class="popup" data-content="Top Level Topic View">
-    <a href="../index.html"> <i class="huge home icon"></i> Topics </a>
+  <div class="popup" data-content="To the top level Topics for this Module...">
+    <a href="../index.html"> <i class="huge home icon"></i> Module </a>
   </div>
 </div>
 
@@ -118,6 +122,10 @@ figcaption
           Database Design
         </a>
       
+        <a class="item" href="talk-3/er_modelling.pdf">
+          ER Modelling
+        </a>
+      
         <a class="item" href="book/index.html">
           Lab-01
         </a>
@@ -144,6 +152,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -163,6 +172,26 @@ It is important to learn about entities because they are the things about which 
 
       </div>
     </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="talk-3/er_modelling.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> ER Modelling </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="talk-3/er_modelling.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The Entity Relationship Diagram (ERD) is a tool for discussion when designing a system.</p>
+
+      </div>
+    </div>
+    
   </a>
 
         
@@ -181,6 +210,7 @@ It is important to learn about entities because they are the things about which 
 
       </div>
     </div>
+    
   </a>
 
         
@@ -195,24 +225,22 @@ It is important to learn about entities because they are the things about which 
 
     </footer>
     <script>
-      
-$(document).ready(function()
-{
-  $("img").addClass ("ui image");
+      $(document).ready(function () {
+  $('img').addClass('ui image');
   $('.ui.embed').embed();
 
-  var images = $(".lab img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0)
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
     }
   });
 
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({
