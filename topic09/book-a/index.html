@@ -1,0 +1,528 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      topic
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-11">
+      Lab-11
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-11">
+        <h1>Objectives</h1>
+<p>This lab will get you to download, install and use a document database called MongoDB.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>MongoDB</h1>
+<p>Go to the following website and download the correct version for your computer:</p>
+<p><a href="http://mongodb.org">http://mongodb.org</a></p>
+<p>Once downloaded install the mongodb package. It usually installs either directly in the c drive or in the program files in the c drive.</p>
+<p>Open a command prompt and navigate to the location of mongo on your computer.</p>
+<p>create a data directory to store all data.</p>
+<pre><code>
+md \data\db</code></pre>
+<p>To start MongoDB run mongod.exe </p>
+<p><img src="./img/00.png" alt=""></p>
+<p>This starts the main MongoDB database process. The waiting for connection message in the console window indicates that the mongod.exe process is running successfully</p>
+<p>Depending on the security level of your system, Windows may pop up a Security Alert box about blocking some features. You should select Private Networks and click Allow access.</p>
+<p>There are a number of guides available online for various editions of mongodb</p>
+<p><a href="https://docs.mongodb.org/manual/#getting-started">https://docs.mongodb.org/manual/#getting-started</a></p>
+<p>We will use the shell edition.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Getting started with MongoDB</h1>
+<h2>Documents</h2>
+<p>A record in MongoDB is a document, which is a data structure composed of field and value pairs, MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays and arrays of documents.</p>
+<p><img src="./img/02.png" alt=""></p>
+<h1>Collections</h1>
+<p>MongoDB stores documents in collections. Collections are analogous to tables in relational databases, although unlike a table, however, a collection does not require its documents to have the same schema.</p>
+<p>In MongoDB, documents stored in a collection must have a unique_id field that acts as a primary key.</p>
+<p>The examples used will be for the restaurants collection in the test database.</p>
+<p>The following is a sample document in the restaurants collection:</p>
+<p><img src="./img/03.png" alt=""></p>
+<p>To import the data you must have a running mongod instance.</p>
+<p>Retrieve the dataset from </p>
+<p><a href="https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json">https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json</a></p>
+<p>and save to a file named primer.dataset.json</p>
+<p>Next in the command prompt navigate to where you saved the json file. Then use mongoimport to insert the documents into the restaurants collection in the test database. If the collection already exists in the test database the operation will drop the restaurants colleciton first. run the following line of code:</p>
+<pre><code>
+mongoimport --db test --collection restaurants --drop --file primer-dataset.json</code></pre>
+<p><img src="./img/04.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Mongo Shell</h1>
+<p>The mongo shell is an interactive JavaScrip interface to MongoDB and is a component of the Mongo package. You can use the mongo shell to query and update data as well as perform administrative operations.</p>
+<p>Ensure that MongoDB is running before attempting to launch the mongo shell.</p>
+<p>Open another terminal window or command prompt and run the mongo shell by typing mongo.exe on windows.</p>
+<p><img src="./img/01.png" alt=""></p>
+<p>On the other command prompt screen you should see the sucessful connection.</p>
+<p>When you run mongo without any arguments, the mongo shell will attempt to connect to the MongoDB instance running on the localhost interface on port 27017</p>
+<p>Type help in the mongo shell for a list of available commands and their descriptions.</p>
+<p>The mongo shell also provides <code>&lt;tab</code>&gt; key completion as well as known shortcuts similar to the bash shell. For example you can use the <code>&lt;up-arrow</code>&gt; and <code>&lt;down-arrow</code>&gt; to retrieve operations from its history.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Insert Data with the mongo Shell</h1>
+<p>You can use the insert() method to add documents to a collection in MongoDB. If you attempt to add documents to a collection that does not exist, MongoDB will create the collection for you.</p>
+<p>In the mongo shell connected to your running modgod instance, switch to the test database.</p>
+<pre><code>
+use test</code></pre>
+<h2>Insert a Document</h2>
+<p>Insert a document into a collection named restaurants.</p>
+<pre><code>
+db.restaurants.insert(
+    {
+        &quot;address&quot; : {
+        &quot;street&quot; : &quot;2 Avenue&quot;,
+        &quot;zipcode&quot; : &quot;10075&quot;,
+        &quot;building&quot; : &quot;1480&quot;,
+        &quot;coord&quot; : [ -73.9557413, 40.7720266]
+      },
+      &quot;borough&quot; : &quot;Manhattan&quot;,
+      &quot;cuisine&quot; : &quot;Italian&quot;,
+      &quot;grades&quot; : [
+        {
+            &quot;date&quot; : ISODate(&quot;2014-10-01T00:00:00Z&quot;),
+            &quot;grade&quot; : &quot;A&quot;,
+            &quot;score&quot; : 11
+        },
+        {
+            &quot;date&quot; : ISODate(&quot;2014-01-16T00:00:00Z&quot;),
+            &quot;grade&quot; : &quot;B&quot;,
+            &quot;score&quot; : 17
+        }
+    ],
+    &quot;name&quot; : &quot;Vella&quot;,
+    &quot;restaurant_id&quot; : &quot;41704620&quot;
+    }
+)</code></pre>
+<p>This method returns a WriteResult object with the status of the operation.</p>
+<p><img src="./img/05.png" alt=""></p>
+<pre><code>
+WriteResult({&quot;nInserted&quot; : 1})</code></pre>
+<p>If the document passed to the insert() method does not contain the _id field, the mongo shell automatically adds the field to the document and sets the field&#39;s value to a generated ObjectId.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Query or Find Data with the Mongo Shell</h1>
+<p>You can use the find() method to issue a query to retrieve data from a collection in MongoDB. All queries in MongoDB have the scope of a single collection.</p>
+<p>Queries can return all documents in a collection or only the documents that match a specified filter or criteria. You can specify the filter or criteria in a document and pass as a parameter to the find() method.</p>
+<p>The find() method returns query results in a curso, which is an iterable object that yields documents.</p>
+<h2>Query for all documents in a collection</h2>
+<pre><code>
+db.restaurants.find()</code></pre>
+<h2>specify Equality Conditions</h2>
+<p>The query condition for an equality match on a field has the following form:</p>
+<pre><code>
+{ &lt;filed1&gt;: &lt;value1&gt;, &lt;field2&gt;: &lt;value2&gt;, ...}</code></pre>
+<p>If the <field> is a top-level field and not a field in an embedded document or an array, you can either enclose the field name in quotes or omit the quotes.</p>
+<p>If the <field> is in an embedded document or an array, use dot notation to access the field. With do notation, you must enclose the dotted name in quotes.</p>
+<h2>Query by a Top Level Field</h2>
+<p>The following operation finds documents whose borough field equals &quot;Manhattan&quot;.</p>
+<pre><code>
+db.restaurants.find({&quot;borough&quot;: &quot;Manhattan&quot;})</code></pre>
+<h2>Query by a Field in an Embedded Document</h2>
+<p>To specify a condition on a field within an embedded document, use the dot notation. Dot notation requires quotes around the whole dotted field name. The following operation specified an equality condition on the zipcode field in the address embedded document.</p>
+<pre><code>
+db.restaurants.find({&quot;address.zipcode&quot;: &quot;10075&quot;})</code></pre>
+<p>The result set includes only the matching documents.</p>
+<h2>Query by a Field in an Array</h2>
+<p>The grades array contains embedded documents as its elements. To specify a condition on a field in these documents, use the dot notation. Dot notation requires quotes around the whole dotted field name. the following queries for documetns whose grades array contains an embedded document with a field grade equal to &quot;B&quot;</p>
+<pre><code>
+db.restaurants.find){&quot;grades.grade&quot;: &quot;B&quot;})</code></pre>
+<p>The result set includes only the matching documents.</p>
+<p>Specify conditions with operators:</p>
+<p>MongoDB provides operators to specify query conditions, such as comparison operators. </p>
+<pre><code>
+{&lt;field&gt;: {&lt;operator1&gt;: &lt;value1&gt;}}</code></pre>
+<p>Example:</p>
+<p>Query for documents whose grades array contains an embedded document with a field score greater than 30.</p>
+<pre><code>
+db.restaurants.find( {&quot;grades.score&quot;: { $gt: 30}})</code></pre>
+<p>for a complete list of the operators, see:</p>
+<p><a href="https://docs.mongodb.org/manual/reference/operator/query/">https://docs.mongodb.org/manual/reference/operator/query/</a></p>
+<p>Combing conditions:</p>
+<p>You can specify a logical conjunction (AND) for a list of query conditions by separating the conditions with a comman in the conditions document.</p>
+<pre><code>
+db.restaurants.find( {&quot;cuisine&quot;: &quot;Italian&quot;, &quot;address.zipcode&quot;: &quot;10075&quot;})</code></pre>
+<p>Logical OR:</p>
+<p>Use the $or query operator:</p>
+<pre><code>
+db.restaurants.find(
+   { $or: [ { &quot;cuisine&quot;: &quot;Italian&quot; }, { &quot;address.zipcode&quot;: &quot;10075&quot; } ] }
+)</code></pre>
+<p>Sort Query Results:</p>
+<p>To specify an order for the result set, appeand the sort() method to the query. Pass to the sort() method a document which contains the field(s) to sort by and the corresponding sort type. E.g. 1 for ascending and -1 for descending.</p>
+<p>For example, the following operation returns all documents in the restaurants collectioin, sorted first by the borough filed in ascending order, and then, within each borough, by the addess.zipcode field in ascending order.</p>
+<pre><code>
+db.restaurants.find().sort( {&quot;borough&quot;: 1, &quot;address.zipcode&quot;: 1})</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Update Data with the mongo shell</h1>
+<p>You can use the update() method to update documents of a colleciton.  The method accepts as its parameters:</p>
+<ul>
+<li>a filter document to match the documents to update</li>
+<li>an update document to specify the modificaiton to perform</li>
+<li>an options parameter (optional)</li>
+</ul>
+<p>To specify the filter, use the same structure and syntax as the query conditions.  By default, the update() method updates a single document. Use the multi option to update all documents that match the criteria.</p>
+<p>You cannot update the _id field.</p>
+<h2>Update Specific Fields</h2>
+<p>To change a field value, MongoDB provides update operators, such as $set to modify values. Some update operators, such as $set, will create the field if the field does not exist. See the individual update operators reference:</p>
+<p><a href="http://docs.mongodb.org/manual/reference/operator/update">http://docs.mongodb.org/manual/reference/operator/update</a></p>
+<p>Update Top-Level Fields</p>
+<p>The following operation updates the first document with name equal to &quot;Juni&quot;, using the $set operator to update the cuisine field and the $currentDate operator to update the lastModified field with the current date.</p>
+<pre><code>
+db.restaurants.update(
+    { &quot;name&quot; : &quot;Juni&quot; },
+    {
+      $set: { &quot;cuisine&quot;: &quot;American (New)&quot; },
+      $currentDate: { &quot;lastModified&quot;: true }
+    }
+)</code></pre>
+<p>The update operation returns a WriteResult object which contains the status of the operation.</p>
+<p><img src="./img/06.png" alt=""></p>
+<p>Update an Embedded Field</p>
+<p>To update a field within an embedded document, use the dot notation. When using the dot notation, enclose the whole dotted field name in quotes. The following updates the street field in the embedded address document.</p>
+<pre><code>
+db.restaurants.update(
+  { &quot;restaurant_id&quot; : &quot;41156888&quot; },
+  { $set: { &quot;address.street&quot;: &quot;East 31st Street&quot; } }
+)</code></pre>
+<p>The update operation returns a WriteResult object which contains the status of the operation.</p>
+<p>Update Multiple Documents</p>
+<p>By default, the update() method updates a single document. To update multiple documents, use the multi option in the update() method. The following operation updates all documents that have address.zipcode field equal to &quot;10016&quot; and cuisine field equal to &quot;Other&quot;, setting the cuisine field to &quot;Category To Be Determined&quot; and the lastModified field to the current date.</p>
+<pre><code>
+db.restaurants.update(
+  { &quot;address.zipcode&quot;: &quot;10016&quot;, cuisine: &quot;Other&quot; },
+  {
+    $set: { cuisine: &quot;Category To Be Determined&quot; },
+    $currentDate: { &quot;lastModified&quot;: true }
+  },
+  { multi: true}
+)</code></pre>
+<p>The update operation returns a WriteResult object which contains the status of the operation.</p>
+<p>Replace a Document</p>
+<p>To replace the entire document except for the _id field, pass an entirely new document as the second argument to the update() method. The replacement document can have different fields from the original document. In the replacement document, you can omit the _id field since the _id field is immutable. If you do include the _id field, it must be the same value as the existing value.</p>
+<p>IMPORTANT
+After the update, the document only contains the field or fields in the replacement document.
+After the following update, the modified document will only contain the _id field, name field, the address field. i.e. the document will not contain the restaurant_id, cuisine, grades, and the borough fields.</p>
+<pre><code>
+db.restaurants.update(
+   { &quot;restaurant_id&quot; : &quot;41704620&quot; },
+   {
+     &quot;name&quot; : &quot;Vella 2&quot;,
+     &quot;address&quot; : {
+              &quot;coord&quot; : [ -73.9557413, 40.7720266 ],
+              &quot;building&quot; : &quot;1480&quot;,
+              &quot;street&quot; : &quot;2 Avenue&quot;,
+              &quot;zipcode&quot; : &quot;10075&quot;
+     }
+   }
+)</code></pre>
+<p>The update operation returns a WriteResult object which contains the status of the operation.</p>
+<p>Additional Information</p>
+<p>If no document matches the update condition, the default behavior of the update method is to do nothing. By specifying the upsert option to true, the update operation either updates matching document(s) or inserts a new document if no matching document exists. In the MongoDB Manual, see update().</p>
+<p><a href="https://docs.mongodb.org/manual/reference/method/db.collection.update/#db.collection.update">https://docs.mongodb.org/manual/reference/method/db.collection.update/#db.collection.update</a></p>
+<p>In MongoDB, write operations are atomic on the level of a single document. If a single update operation modifies multiple documents of a collection, the operation can interleave with other write operations on that collection. In the MongoDB Manual, see Atomicity.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Removing data with the mongo shell</h1>
+<p>You can use the remove() method to remove documents from a collection. The method takes a conditions document that determines the documents to remove.</p>
+<p>To specify a remove condition, use the same structure and syntax as the query conditions. </p>
+<h2>Remove All Documents That Match a Condition</h2>
+<p>The following operation removes all documents that match the specified condition.</p>
+<pre><code>
+db.restaurants.remove( 
+{ &quot;borough&quot;: &quot;Manhattan&quot; } )</code></pre>
+<p>The remove operation returns a WriteResult object which contains the status of the operation. nRemoved field specifies the number of documents removed.</p>
+<h2>Use the justOne Option</h2>
+<p>By default, the remove() method removes all documents that match the remove condition. Use the justOne option to limit the remove operation to only one of the matching documents.</p>
+<pre><code>
+db.restaurants.remove( 
+{ &quot;borough&quot;: &quot;Queens&quot; }, { justOne: true } 
+)</code></pre>
+<p>Successful operation should return the following WriteResult object.</p>
+<pre><code>
+WriteResult({ &quot;nRemoved&quot; : 1 })</code></pre>
+<p>nRemoved field specifies the number of documents removed, in this case 1.</p>
+<h2>Remove All Documents</h2>
+<p>To remove all documents from a collection, pass an empty conditions document {} to the remove() method.</p>
+<pre><code>
+db.restaurants.remove( { } )</code></pre>
+<p>The remove operation returns a WriteResult object which contains the status of the operation. nRemoved field specifies the number of documents removed.</p>
+<h2>Drop a Collection</h2>
+<p>The remove all operation only removes the documents from the collection. The collection itself, as well as any indexes for the collection, remain. To remove all documents from a collection, it may be more efficient to drop the entire collection, including the indexes, and then recreate the collection and rebuild the indexes. You can usse the drop() method to drop a collection, including any indexes. No need to test this as you would have to re-import your restaurants collection again.</p>
+<pre><code>
+db.restaurants.drop()</code></pre>
+<p>Upon successful drop of the collection, the operation returns true.</p>
+<pre><code>
+true</code></pre>
+<p>If you do drop the collection your can re-import 
+If the collection to drop does not exist, the operation will return false.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Brenda Mullally (bmullally@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.embed').embed();
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
